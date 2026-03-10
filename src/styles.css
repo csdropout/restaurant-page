@@ -38,7 +38,8 @@ nav button {
     height: 200px;
 }
 
-.menu-heading {
+.menu-heading,
+.about-heading {
     font-size: 2em;
     font-weight: 700;
 }
@@ -61,4 +62,11 @@ nav button {
 
 .menu ul li {
     margin: 1em 0;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
 }

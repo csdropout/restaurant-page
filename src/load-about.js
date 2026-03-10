@@ -3,15 +3,27 @@ import resturantLogo from "./fried-chicken-logo.jpg";
 export default function loadAbout() {
     const contentDiv = document.querySelector("div#content");
 
+    const aboutDiv = document.createElement("div");
+    aboutDiv.classList.add("about");
+
     // Image
     const logo = document.createElement("img")
     logo.src = resturantLogo;
+    logo.classList.add("logo");
 
     // Background
+    const backgroundDiv = document.createElement("div");
+    const backgroundHeading = document.createElement("p");
+    backgroundHeading.classList.add("about-heading");
+    backgroundHeading.textContent = "Background";
     const backgroundText = document.createElement("p");
-    backgroundText.textContent = "We started this restaurant in 2000 because we love fried chicken! You've probably seen our restaurant on your feed, a quaint little restaurant tucked in a small neighbourhood. We hope you come and enjoy our fried chicken!"
+    backgroundText.textContent = "We started this restaurant in 2000 because we love fried chicken!";
+    backgroundDiv.append(backgroundHeading, backgroundText);
 
     // Where to find us
+    const findUsHeading = document.createElement("p");
+    findUsHeading.textContent = "We are open:";
+    findUsHeading.classList.add("about-heading");
     const findUsDiv = document.createElement("div");
     const openingDays = document.createElement("p");
     openingDays.textContent = "Monday - Friday";
@@ -19,10 +31,10 @@ export default function loadAbout() {
     openingHours.textContent = "11am - 8pm";
     const address = document.createElement("p");
     address.textContent = "123 Quaint Neighbourhood";
-    findUsDiv.append(openingDays, openingHours, address);
+    findUsDiv.append(findUsHeading, openingDays, openingHours, address);
 
     // reset
-    contentDiv.textContent = ""
-
-    contentDiv.append(logo, backgroundText, findUsDiv)
+    contentDiv.textContent = "";
+    aboutDiv.append(logo, backgroundDiv, findUsDiv);
+    contentDiv.append(aboutDiv);
 };
