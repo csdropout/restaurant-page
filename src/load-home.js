@@ -11,5 +11,6 @@ export default function loadHome() {
     const subtext = document.createElement("p");
     subtext.textContent = "According to survey on the best fried chicken in the country which gathered more than 500 responses...";
 
+    contentDiv.textContent = "";
     contentDiv.append(logo, headline, subtext);
 };
