@@ -38,6 +38,11 @@ nav button {
     border: none;
 }
 
+nav button:hover {
+    background-color: #b32d44;
+    cursor: pointer;
+}
+
 .tab.active {
     background-color: #aa162f;
 }
