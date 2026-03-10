@@ -2,8 +2,12 @@ export default function loadMenu() {
     const contentDiv = document.querySelector("div#content");
 
     const menuDiv = document.createElement("div");
-    menuDiv.classList.add("menu")
+    menuDiv.classList.add("menu-container");
+    const menuHeading = document.createElement("h1");
+    menuHeading.textContent = "Menu";
 
+    const menuItemsContainer = document.createElement("div");
+    menuItemsContainer.classList.add("menu")
     // Types (Wing, Drums, Boneless)
     const typeDiv = document.createElement("div");
     const typeHeading = document.createElement("p");
@@ -66,6 +70,7 @@ export default function loadMenu() {
 
     // Reset
     contentDiv.textContent = "";
-    menuDiv.append(typeDiv, flavorDiv, sidesDiv, drinksDiv);
+    menuItemsContainer.append(typeDiv, flavorDiv, sidesDiv, drinksDiv);
+    menuDiv.append(menuHeading, menuItemsContainer);
     contentDiv.append(menuDiv);
 }
