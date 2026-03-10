@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header nav {
+    background-color: #550b17;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    padding: 1em;
+}
+
+nav button {
+    background-color: #bb4559;
+    padding: 0.5em 2em;
+    border-radius: 1em;
+    border: none;
+}
+
+.tab.active {
+    background-color: #aa162f;
+}
+
+#content {
+    background-color: #ff2146;
+    text-align: center;
+    padding-bottom: 2em;
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+}

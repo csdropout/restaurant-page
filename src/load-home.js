@@ -1,15 +1,14 @@
-import resturantLogo from "./fried-chicken-logo.jpg";
+import restaurantLogo from "./fried-chicken-logo.jpg";
 
 export default function loadHome() {
     const contentDiv = document.querySelector("div#content");
     const logo = document.createElement("img");
-    logo.src = resturantLogo;
-    logo.style.width = "5em";
-    logo.style.height = "auto";
+    logo.classList.add("logo")
+    logo.src = restaurantLogo;
     const headline = document.createElement("h1");
-    headline.textContent = "Singapore's No. 1 Fried Chicken Restaurant";
+    headline.textContent = "Chilli Chicken";
     const subtext = document.createElement("p");
-    subtext.textContent = "According to survey on the best fried chicken in the country which gathered more than 500 responses...";
+    subtext.textContent = "Which came first, the chicken or the egg?";
 
     contentDiv.textContent = "";
     contentDiv.append(logo, headline, subtext);
