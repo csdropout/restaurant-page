@@ -1,59 +1,71 @@
 export default function loadMenu() {
     const contentDiv = document.querySelector("div#content");
 
+    const menuDiv = document.createElement("div");
+    menuDiv.classList.add("menu")
+
     // Types (Wing, Drums, Boneless)
     const typeDiv = document.createElement("div");
     const typeHeading = document.createElement("p");
     typeHeading.classList.add("menu-heading");
     typeHeading.textContent = "Types";
-    const typeWing = document.createElement("p");
+    const typeList = document.createElement("ul")
+    const typeWing = document.createElement("li");
     typeWing.textContent = "Wings";
-    const typeDrums = document.createElement("p");
+    const typeDrums = document.createElement("li");
     typeDrums.textContent = "Drums";
-    const typeBoneless = document.createElement("p");
+    const typeBoneless = document.createElement("li");
     typeBoneless.textContent = "Boneless";
-    typeDiv.append(typeHeading, typeWing, typeDrums, typeBoneless);
+    typeList.append(typeWing, typeDrums, typeBoneless)
+    typeDiv.append(typeHeading, typeList);
 
     // Flavors
     const flavorDiv = document.createElement("div");
     const flavorHeading = document.createElement("p");
     flavorHeading.classList.add("menu-heading");
     flavorHeading.textContent = "Flavors";
-    const flavorOriginal = document.createElement("p");
+    const flavorList = document.createElement("ul");
+    const flavorOriginal = document.createElement("li");
     flavorOriginal.textContent = "Original";
-    const flavorSpicy = document.createElement("p");
+    const flavorSpicy = document.createElement("li");
     flavorSpicy.textContent = "Spicy";
-    const flavorSweetSpicy = document.createElement("p");
+    const flavorSweetSpicy = document.createElement("li");
     flavorSweetSpicy.textContent = "Sweet & Spicy";
-    flavorDiv.append(flavorHeading, flavorOriginal, flavorSpicy, flavorSweetSpicy);
+    flavorList.append(flavorOriginal, flavorSpicy, flavorSweetSpicy)
+    flavorDiv.append(flavorHeading, flavorList);
 
     // Sides
     const sidesDiv = document.createElement("div");
     const sidesHeading = document.createElement("p");
     sidesHeading.classList.add("menu-heading");
     sidesHeading.textContent = "Sides";
-    const sideFries = document.createElement("p");
+    const sidesList = document.createElement("ul");
+    const sideFries = document.createElement("li");
     sideFries.textContent = "Fries";
-    const sideTaterTots = document.createElement("p");
+    const sideTaterTots = document.createElement("li");
     sideTaterTots.textContent = "Tater Tots";
-    const sidesNuggets = document.createElement("p");
+    const sidesNuggets = document.createElement("li");
     sidesNuggets.textContent = "Nuggets";
-    sidesDiv.append(sidesHeading, sideFries, sideTaterTots, sidesNuggets);
+    sidesList.append(sideFries, sideTaterTots, sidesNuggets)
+    sidesDiv.append(sidesHeading, sidesList);
 
     // Drinks
     const drinksDiv = document.createElement("div");
     const drinksHeading = document.createElement("p");
     drinksHeading.classList.add("menu-heading");
     drinksHeading.textContent = "Drinks";
-    const drinksMilkshake = document.createElement("p");
+    const drinksList = document.createElement("ul");
+    const drinksMilkshake = document.createElement("li");
     drinksMilkshake.textContent = "Milkshake";
-    const drinksSoda = document.createElement("p");
+    const drinksSoda = document.createElement("li");
     drinksSoda.textContent = "Soda";
-    const drinksBeer = document.createElement("p");
+    const drinksBeer = document.createElement("li");
     drinksBeer.textContent = "Beer";
-    drinksDiv.append(drinksHeading, drinksMilkshake, drinksSoda, drinksBeer);
+    drinksList.append(drinksMilkshake, drinksSoda, drinksBeer);
+    drinksDiv.append(drinksHeading, drinksList);
 
     // Reset
     contentDiv.textContent = "";
-    contentDiv.append(typeDiv, flavorDiv, drinksDiv);
+    menuDiv.append(typeDiv, flavorDiv, sidesDiv, drinksDiv);
+    contentDiv.append(menuDiv);
 }
