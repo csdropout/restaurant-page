@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body {
+    font-size: 20px;
+}
+
 header nav {
     background-color: #550b17;
     display: flex;
@@ -26,10 +30,35 @@ nav button {
 #content {
     background-color: #ff2146;
     text-align: center;
-    padding-bottom: 2em;
+    padding: 2em;
 }
 
 .logo {
     width: 200px;
     height: 200px;
+}
+
+.menu-heading {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.menu > div {
+    border: 2px solid #a5aa16;
+    padding: 1em;
+    flex: 1;
+}
+
+.menu ul {
+    list-style-type: none;
+}
+
+.menu ul li {
+    margin: 1em 0;
 }
